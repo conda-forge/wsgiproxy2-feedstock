@@ -1,5 +1,5 @@
 {% set name = "WSGIProxy2" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f9347ba1405ebe4ea614a290f10d44577f3fdc644e8ad2c9e10392c46416a398
+  sha256: caa8958b5b3cc908c60fc2b801c9779da2036e9f1f44828e966e0b24d46ea9a5
 
 build:
   number: 0
