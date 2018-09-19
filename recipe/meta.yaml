@@ -33,19 +33,7 @@ about:
   license_family: MIT
   license_file: COPYING
   summary: A WSGI Proxy with various http client backends
-  doc_url: https://wsgiproxy2.readthedocs.org<<<<<<< 0.4.5
-9
- 
-  fn: {{ name }}-{{ version }}.tar.gz
-10
- 
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-11
- 
-  sha256: caa8958b5b3cc908c60fc2b801c9779da2036e9f1f44828e966e0b24d46ea9a5
-12
- 
-=======
+  doc_url: https://wsgiproxy2.readthedocs.org
   dev_url: https://github.com/gawel/WSGIProxy2
 
 extra:
