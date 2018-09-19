@@ -1,24 +1,22 @@
-{% set name = "WSGIProxy2" %}
 {% set version = "0.4.4" %}
 
 package:
-  name: {{ name|lower }}
+  name: wsgiproxy2
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/W/WSGIProxy2/WSGIProxy2-{{ version }}.tar.gz
   sha256: f9347ba1405ebe4ea614a290f10d44577f3fdc644e8ad2c9e10392c46416a398
 
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
