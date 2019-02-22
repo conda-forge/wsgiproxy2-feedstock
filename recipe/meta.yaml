@@ -1,4 +1,4 @@
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: wsgiproxy2
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/W/WSGIProxy2/WSGIProxy2-{{ version }}.tar.gz
-  sha256: caa8958b5b3cc908c60fc2b801c9779da2036e9f1f44828e966e0b24d46ea9a5
+  sha256: cee2a64abc193cc96c7ff1208b709335e9a4d1316ce84b91501102166d814c9a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
