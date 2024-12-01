@@ -5,25 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/W/WSGIProxy2/WSGIProxy2-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/W/WSGIProxy2/WSGIProxy2-{{ version }}.tar.gz
   sha256: 0d9ecb141de720e2fd4f7a275a4a83a961ffeb6717483d940021ffa1c46f665c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - setuptools
     - webob
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - wsgiproxy
 
